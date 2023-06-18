@@ -1,0 +1,5 @@
+.newsletter {
+    background-color: var(--clrPrimary2);
+    padding: 70px 0;
+    justify-items: center;
+}

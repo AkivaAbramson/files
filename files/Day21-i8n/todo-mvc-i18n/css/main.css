@@ -1,0 +1,63 @@
+body {
+    background-color: lightgray;
+}
+
+body.rtl {
+    direction: rtl;
+}
+
+body.rtl .btn-delete {
+    float: left;
+}
+
+header {
+    background-color: aliceblue;
+    padding: 10px;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+.todo-filter {
+    margin-inline-start: 25px;
+    margin-block-start: 20px;
+}
+
+ul li {
+    cursor: pointer;
+    margin: 5px;
+}
+
+.done {
+    text-decoration: line-through;
+}
+
+.mute {
+    color: gray;
+    font-size: 0.8em;
+}
+
+.btn-delete {
+    border: 0;
+    border-radius: 50%;
+    background-color: rgb(253, 245, 245);
+    cursor: pointer;
+    float: right;
+}
+
+.btn-delete:hover {
+    background-color: brown;
+    color: white;
+}
+
+.todo-add {
+    background-color: aliceblue;
+    padding: 20px;
+    text-align: center;
+}
+
+.todo-stat {
+    margin-inline-start: 25px;
+}

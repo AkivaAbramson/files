@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>File Download Demo</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body onload="onInit()">
+
+    <section class="links">
+        <a href="#" onclick="downloadCSV(this)" download="exported-data.csv">
+            <i class="fas fa-file-csv"></i>
+            Download Selected Toys
+        </a>
+        
+        <a href="#" onclick="downloadImg(this)" download="myImg.gif">
+            <i class="fas fa-file"></i>
+            Download an Image
+        </a>
+    </section>
+
+    <table class="toy-table">
+        <thead>
+            <th onclick="onSetSort('name')">Name</th>
+            <th onclick="onSetSort('price')">Price</th>
+            <th onclick="onSetSort('createdAt')">Created At</th>
+            <th onclick="onSetSort('category')">Category</th>
+            <th><input oninput="onToggleCheckAll(this)" type="checkbox"></th>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <script src="https://kit.fontawesome.com/402c8e958b.js" crossorigin="anonymous"></script>
+    <script src="js/toy-service.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

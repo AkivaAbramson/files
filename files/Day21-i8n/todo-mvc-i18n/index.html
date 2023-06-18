@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Todo MVC</title>
+</head>
+
+<body onload="onInit()">
+    <!-- header -->
+    <header>
+        <h1 data-trans="title" data-name="puki">My Todos</h1>
+        <h4 data-trans="subtitle">MVC - Model-View-Controller</h4>
+        <select onchange="onSetLang(this.value)">
+            <option value="en">English</option>
+            <option value="he">עברית</option>
+            <option value="es">Spanish</option>
+        </select>
+    </header>
+
+    <!-- filter -->
+    <select onchange="onSetFilter(this.value)" class="todo-filter">
+        <option data-trans="filter-all" value="all">All</option>
+        <option data-trans="filter-active" value="active">Active</option>
+        <option data-trans="filter-done" value="done">Done</option>
+    </select>
+
+    <!-- todo-list -->
+    <ul class="todo-list">
+    </ul>
+
+    <!-- todo-stat -->
+    <section class="todo-stat">
+        <h4>
+            <span data-trans="stat-todo-label">Todos</span>:
+            <span class="total-todos-count"></span>
+            <span data-trans="stat-active-label">Active</span>:
+            <span class="active-todos-count"></span>
+        </h4>
+    </section>
+
+    <hr>
+
+    <!-- todo-add -->
+    <section class="todo-add">
+        <form onsubmit="onAddTodo(event)">
+            <input data-trans="add-todo-placeholder" type="text" placeholder="What needs to be done?" name="todo-txt" />
+            <button data-trans="add">Add</button>
+        </form>
+    </section>
+
+
+    <script src="js/services/util.service.js"></script>
+    <script src="js/services/i18n.service.js"></script>
+    <script src="js/services/todo.service.js"></script>
+    <script src="js/todo.controller.js"></script>
+
+</body>
+
+</html>
